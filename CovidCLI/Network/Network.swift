@@ -31,8 +31,10 @@ struct RequestMaker {
         case let .history(country: .code(code)):
             let url = Endpoint.history.appendingPathComponent(code)
             return URLRequest(url: url)
+
         case .history(country: .world):
-            return URLRequest(url: Endpoint.historyWorld)
+            let url = Endpoint.historyWorld
+            return URLRequest(url: url)
         }
     }
 }
@@ -42,6 +44,7 @@ class Network {
     public func run<T: Decodable>(type: RequestType, completion: @escaping (Result<T, Error>) -> Void) {
 
         let session = URLSession(configuration: .default)
+
         let task = session.dataTask(
         with: RequestMaker.makeRequest(type: type)) { (data, response, error) in
 

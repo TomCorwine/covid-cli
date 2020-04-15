@@ -32,7 +32,7 @@ struct Formatter {
 
         var previous: History?
 
-        var rows: [[String]] = [["Datum", "Bekräftade (+/-)", "Döda (+/-)", "Friska (+/-)"]]
+        var rows: [[String]] = [["Date", "Confirmed (+/-)", "Deaths (+/-)", "Recovered (+/-)"]]
 
         keys.forEach { key in
             if let history = historyDictionary[key] {

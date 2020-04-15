@@ -18,42 +18,7 @@ class Covid {
     }
 
     private let network = Network()
-    let ln = LineNoise()
-
-    private func setupHints() {
-        ln.setHintsCallback { currentBuffer in
-            let hints = [
-                "1",
-                "2",
-                "3"
-            ]
-
-            let filtered = hints.filter { $0.hasPrefix(currentBuffer) }
-
-            if let hint = filtered.first {
-                // Make sure you return only the missing part of the hint
-                let hintText = String(hint.dropFirst(currentBuffer.count))
-
-                // (R, G, B)
-                let color = (127, 0, 127)
-
-                return (hintText, color)
-            } else {
-                return (nil, nil)
-            }
-        }
-    }
-
-    private func setupCompletions() {
-        ln.setCompletionCallback { currentBuffer in
-            let completions = [
-                "1. Select Country",
-                "2. Show world statistics",
-                "3. Exit"
-            ]
-            return completions.filter { $0.hasPrefix(currentBuffer) }
-        }
-    }
+    private let ln = LineNoise()
 
     private func readCountry() {
         do {
@@ -69,7 +34,7 @@ class Covid {
     private func runSelection(meny: Int?) {
         guard let item = meny, let meny = MenuChoice(rawValue: item) else {
             print("Not a valid input")
-            renderMeny()
+            start()
             return
         }
 
@@ -84,7 +49,7 @@ class Covid {
         }
     }
 
-    func renderMeny() {
+    func start() {
         print("Show statistics from a specific country or world statistics")
         print("1. Select Country")
         print("2. Show world statistics")
@@ -99,12 +64,6 @@ class Covid {
         }
     }
 
-    func start() {
-        setupCompletions()
-        setupHints()
-        renderMeny()
-    }
-
     func request(type: RequestType) {
         network.run(type: type) { (result: Result<RequestResult<History>, Error>) in
             switch result {
@@ -113,7 +72,7 @@ class Covid {
             case let .failure(error):
                 print(error)
             }
-            self.renderMeny()
+            self.start()
         }
         RunLoop.main.run()
     }
