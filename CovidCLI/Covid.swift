@@ -20,6 +20,32 @@ class Covid {
     private let network = Network()
     private let ln = LineNoise()
 
+}
+
+extension Covid {
+    func start() {
+        clearScreen()
+        print("Show statistics from a specific country or world statistics")
+        print("1. Select Country")
+        print("2. Show world statistics")
+        print("3. Exit")
+
+        do {
+            let input = try ln.getLine(prompt: "> ")
+            print()
+            runSelection(meny: Int(input))
+        } catch {
+            print(error)
+        }
+    }
+}
+
+extension Covid {
+
+    private func clearScreen() {
+        print("\u{001B}[2J")
+    }
+
     private func readCountry() {
         do {
             print("\nEnter country abbrevation:")
@@ -49,22 +75,7 @@ class Covid {
         }
     }
 
-    func start() {
-        print("Show statistics from a specific country or world statistics")
-        print("1. Select Country")
-        print("2. Show world statistics")
-        print("3. Exit")
-
-        do {
-            let input = try ln.getLine(prompt: "> ")
-            print()
-            runSelection(meny: Int(input))
-        } catch {
-            print(error)
-        }
-    }
-
-    func request(type: RequestType) {
+    private func request(type: RequestType) {
         network.run(type: type) { (result: Result<RequestResult<History>, Error>) in
             switch result {
             case let .success(result):
