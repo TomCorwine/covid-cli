@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "LineNoise",
+        "repositoryURL": "https://github.com/andybest/linenoise-swift",
+        "state": {
+          "branch": "master",
+          "revision": "78e9bc9b685ffd551af0f3ac4d6e2beb22afd33b",
+          "version": null
+        }
+      },
+      {
+        "package": "Nimble",
+        "repositoryURL": "https://github.com/Quick/Nimble.git",
+        "state": {
+          "branch": null,
+          "revision": "7fd118ec8795888bcbbebc1a41f6984454c4cd6f",
+          "version": "8.0.7"
+        }
+      },
+      {
+        "package": "Table",
+        "repositoryURL": "https://github.com/JanGorman/Table",
+        "state": {
+          "branch": null,
+          "revision": "7b8521c3b1078ba0b347964aec7c503cd6f1ff40",
+          "version": "1.1.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E4628F29-58BA-47A0-8D3D-4E0BF38A8EBF"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B1695909-7C53-4394-B00B-B8EB087D42D3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CovidCLI/Formatter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "printHistory(result:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B1695909-7C53-4394-B00B-B8EB087D42D3 - 27857856b13c5ff2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static CovidCLI.Formatter.printHistory(result: CovidCLI.RequestResult&lt;CovidCLI.History&gt;) -&gt; ()"
+                  moduleName = "CovidCLI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikaelkonradsson/Documents/git/CovidCLI/CovidCLI/Formatter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "709">
+               </Location>
+               <Location
+                  uuid = "B1695909-7C53-4394-B00B-B8EB087D42D3 - 19854e9dda57c451"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in static CovidCLI.Formatter.printHistory(result: CovidCLI.RequestResult&lt;CovidCLI.History&gt;) -&gt; ()"
+                  moduleName = "CovidCLI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mikaelkonradsson/Documents/git/CovidCLI/CovidCLI/Formatter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "387">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6956BAA-152D-4380-9C7E-B6AC6E4C5181"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/CovidCLI-bqqmuzoszdaahggkyufsoxplfomk/SourcePackages/checkouts/Table/Sources/Table.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "validateData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
